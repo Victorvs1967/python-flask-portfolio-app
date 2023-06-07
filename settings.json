@@ -1,0 +1,19 @@
+{
+  "site_url": "http://localhost:8000",
+  "site_title": "Victor: fullstack web developer",
+  "description": "Wed Develope (HTML, Javascript, CSS, Java, Python...)",
+  "keywords": "Web develope, fullstack, Java, Spring, Python, Flask",
+  "name": "Victor Smirnov",
+  "tag1": "Fullstack",
+  "tag2": "web developer",
+  "sect1": "Home",
+  "sect2": "About",
+  "sect3": "Portfolio",
+  "sect4": "Blog",
+  "sect5": "Contacts",
+  "telegram": "https://telegram.com",
+  "linkedin": "https://linkedin.com",
+  "facebook": "https://facbook.com",
+  "email": "victor@mail.me",
+  "city": "Kiev"
+}

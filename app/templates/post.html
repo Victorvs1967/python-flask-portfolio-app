@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <style>
+    body::before {
+      background: #040404 url("{{ url_for('static', filename='img/portfolio/post.jpg') }}");
+    }
+  </style>
+  <div class="portfolio-details" id="portfolio-details">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="portfolio-title">{{ post.title }}</h2>
+        </div>
+        <div class="col-lg-8 portfolio-info">
+          <h3>{{ post.description }}</h3>
+          <ul>
+            <li><strong>Category</strong>: {{ post.tag.title }}</li>
+            <li><strong>Project</strong>: {{ post.project }}</li>
+            <li><strong>Published</strong>: {{ post.date }}</li>
+            <li><strong>Platform</strong>: <a href="{{ post.link }}">{{ post.platform }}</a></li>
+          </ul>
+          <p>{{ post.html | safe }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ {% endblock content %}

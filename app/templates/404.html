@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <style>
+    .error-template {padding-top: 15rem; text-align: center;}
+    .error-actions {margin: 1.5rem 0;}
+    .error-actions .btn {margin-right: 1rem;}
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="error-template">
+          <h1>Oops!</h1>
+          <h2>Error 404</h2>
+          <div class="error-details">Page not found...</div>
+          <div class="error-actions"><a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">Back</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
