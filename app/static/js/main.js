@@ -7,9 +7,11 @@
 
   const on = (type, el, listener, all = false) => {
     const selectEl = select(el, all);
-    if (selectEl) all ?
+    if (selectEl) {
+      all ?
       selectEl.forEach(e => e.addEventListener(type, listener)) :
       selectEl.addEventListener(type, listener);
+    }
   };
 
   const scrollto = el => window.scrollTo({
@@ -17,13 +19,15 @@
     behavior: 'smooth'
   });
 
-  on('click', '.mobile-nav-toggle', function(e) {
+  // on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', e => {
     select('#navbar').classList.toggle('navbar-mobile');
     this.classList.toggle('bi-list');
     this.classList.toggle('bi-x');
   });
 
-  on('click', '#navbar .nav-link', function(e) {
+  // on('click', '#navbar .nav-link', function(e) {
+  on('click', '#navbar .nav-link', e => {
     const section = select(this.hash);
     if (section) {
       e.preventDefault();
@@ -72,6 +76,8 @@
       if (initial_nav) {
         const header = select('#header');
         const navlinks = select('#navbar .nav-link', true);
+
+        console.log(navlinks);
 
         header.classList.add('header-top');
 
