@@ -26,7 +26,6 @@ const init = () => {
   });
 
   on('click', '#navbar .nav-link', function(e) {
-    console.log(this.hash);
     const section = select(this.hash);
     if (section) {
       e.preventDefault();
@@ -68,8 +67,6 @@ const init = () => {
   }, true);
 
   window.addEventListener('load', () => {
-    console.log(window.location);
-
     if (window.location.hash) {
       const initial_nav = select(window.location.hash);
       if (initial_nav) {
