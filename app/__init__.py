@@ -62,7 +62,7 @@ def card(name):
 
 @app.route('/pygments.css')
 def pygments_css():
-  return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
+  return pygments_style_defs('material'), 200, {'Content-Type': 'text/css'}
 
 @app.errorhandler(404)
 def page_not_found(e):
